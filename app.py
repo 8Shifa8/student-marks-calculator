@@ -8,3 +8,10 @@ marks5= float(input('Enter marks for subject 5:'))
 total= (marks1 + marks2 + marks3 + marks4 + marks5)/5
 
 print('The total percentage is:', total)
+
+if total>=90:
+    print('Grade A')
+elif total>= 75 and total<90:
+    print('Grade B')
+else:
+    print('Grade C')
