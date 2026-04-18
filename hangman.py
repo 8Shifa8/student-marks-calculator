@@ -51,7 +51,7 @@ def start_game():
 
     print("Let's play Hangman!")
     print_display(display)
-    print(len(word))
+    print("The number of letters is", len(word))
     print()
 
     while attempts > 0 and "_" in display:
@@ -66,6 +66,10 @@ def start_game():
             print("You already guessed that letter!")
             continue
         guessed_letters.append(guess)
+
+        if len(guess) > 1:
+            print("Please input a single letter!")
+            continue
 
         if guess in word:
             update_display_word(word, display, guess)
